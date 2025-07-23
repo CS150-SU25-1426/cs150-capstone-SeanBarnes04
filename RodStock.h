@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <iomanip>
-#include <cmath>
+#include <string>
 using namespace std;
 
 class RodStock {
@@ -16,6 +16,7 @@ private:
 
 public:
     RodStock(string diameter, double length, string material, string units);
+    RodStock(double diameter, double length, string material, string units);
     RodStock(const RodStock& other);
     ~RodStock();
 
@@ -28,8 +29,9 @@ public:
     void setLen(double length);
     void setMat(string material);
     void setUnits(string units);
-    void setCut(double cutLength);
+    void setDia(double diameter);
 
+    void setCut(double cutLength);
     RodStock operator--();
 
     friend ostream& operator<<(ostream& os, const RodStock& r);
