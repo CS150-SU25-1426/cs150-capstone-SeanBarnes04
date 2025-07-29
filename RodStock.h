@@ -1,5 +1,5 @@
 #ifndef RODSTOCK_h
-#define RODMSTOCK_h
+#define RODSTOCK_h
 
 #include <iostream>
 #include <iomanip>
@@ -32,6 +32,7 @@ public:
     void setDia(double diameter);
 
     void setCut(double cutLength);
+    double getCut(RodStock rodstock);
     RodStock operator--();
 
     friend ostream& operator<<(ostream& os, const RodStock& r);

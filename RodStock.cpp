@@ -108,6 +108,7 @@ void RodStock::setDia(double diameter) {
 }
 
 void RodStock::setCut(double cutLength) { this->toCut = cutLength; }
+double RodStock::getCut(RodStock rodstock) { return rodstock.toCut; }
 RodStock RodStock::operator--() { // cutLength must be called first, otherwise this function does nothing
     length -= toCut;
     return *this;
